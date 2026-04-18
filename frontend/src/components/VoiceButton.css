@@ -1,0 +1,19 @@
+.vwrap { position:relative; display:flex; align-items:center; justify-content:center; gap:18px; }
+.pring { position:absolute; width:70px; height:70px; border-radius:50%;
+  border:2px solid var(--accent); animation:pulse-ring 1.8s ease-out infinite; pointer-events:none; }
+.p2 { animation-delay:0.6s; }
+.vbtn { width:70px; height:70px; border-radius:50%; border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; z-index:1; transition:transform 0.15s ease, box-shadow 0.2s ease; flex-shrink:0; }
+.vbtn.idle, .vbtn.error {
+  background:linear-gradient(145deg,#1a3a5c,#2d6a8f); color:var(--accent);
+  box-shadow:0 4px 20px rgba(99,179,237,0.25); }
+.vbtn.idle:hover { transform:scale(1.06); box-shadow:0 6px 28px rgba(99,179,237,0.4); }
+.vbtn.recording { background:linear-gradient(145deg,#7b1a1a,#c53030); color:#fff;
+  box-shadow:0 4px 24px rgba(252,129,129,0.4); }
+.vbtn.processing { background:var(--bg3); color:var(--text3); cursor:not-allowed; }
+.vbtn.speaking { background:linear-gradient(145deg,#1a4a1a,#276227); color:var(--green);
+  box-shadow:0 4px 24px rgba(104,211,145,0.3); animation:heartbeat 1.2s ease-in-out infinite; }
+.wbars { display:flex; align-items:center; gap:3px; height:34px; }
+.bar { width:3px; border-radius:2px; background:var(--border2); transition:background 0.3s; height:9px; }
+.bar.active { background:var(--accent); animation:wave 0.8s ease-in-out infinite; }
